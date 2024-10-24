@@ -1,0 +1,988 @@
+{
+	"info": {
+		"_postman_id": "08592475-cbcd-4565-997b-334b8b1c929e",
+		"name": "ParkMate",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12622914"
+	},
+	"item": [
+		{
+			"name": "Get All Clients",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/client/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"client",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Client",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/client/a48e9780-130c-4302-9c19-e1d83a185bba",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"client",
+						"a48e9780-130c-4302-9c19-e1d83a185bba"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Client",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/client/a48e9780-130c-4302-9c19-e1d83a185bba",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"client",
+						"a48e9780-130c-4302-9c19-e1d83a185bba"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Client",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"active\": 1,\r\n  \"portalurl\": \"https://mouriteh.com\",\r\n  \"version\": 6.0,\r\n  \"phone\": \"1234567890\",\r\n  \"clientBrandings\" : [\r\n    {\r\n        \"value\": \"123\"\r\n    }\r\n  ],\r\n  \"clientImages\" : [\r\n    {\r\n        \"imageName\": \"logo\"\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/client",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Client",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"clientId\": \"cd7f2af6-e96a-4ebc-b3fd-b796984f1dc44\",\r\n        \"active\": 1,\r\n        \"portalurl\": \"https://mouriteh.com\",\r\n        \"version\": 2,\r\n        \"phone\": \"456789456789\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/client",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Client Branding",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"value\": \"123456\",\r\n    \"client\": {\r\n        \"clientId\": \"a48e9780-130c-4302-9c19-e1d83a185bba\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/clientbranding",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientbranding"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Client Branding",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"clientBrandingId\": \"145dfb6d-ca2f-48ab-a107-2f576dac6282\",\r\n    \"value\": \"123456789\",\r\n    \"client\": {\r\n        \"clientId\": \"a48e9780-130c-4302-9c19-e1d83a185bba\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/clientbranding",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientbranding"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All ClientBranding",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/clientbranding/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientbranding",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All ClientBranding By ClientID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/clientbranding/client/a48e9780-130c-4302-9c19-e1d83a185bba",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientbranding",
+						"client",
+						"a48e9780-130c-4302-9c19-e1d83a185bba"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get ClientBranding",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/clientbranding/10d80930-71b9-4a89-92c1-a4def6c85da9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientbranding",
+						"10d80930-71b9-4a89-92c1-a4def6c85da9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Client Image",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"imageName\": \"logo2\",\r\n    \"client\": {\r\n        \"clientId\": \"0828a7ec-de89-432b-84ba-b4d8f1464616\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/clientimage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientimage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Client Images",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/clientimage/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientimage",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Client Image",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"clientImageId\": \"bc49743c-2c7d-4b7b-8b0a-a74551bd8436\",\r\n    \"imageName\": \"logo3\",\r\n    \"client\": {\r\n        \"clientId\": \"0828a7ec-de89-432b-84ba-b4d8f1464616\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/clientimage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientimage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Client Images By ClientID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/clientimage/client/a48e9780-130c-4302-9c19-e1d83a185bba",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientimage",
+						"client",
+						"a48e9780-130c-4302-9c19-e1d83a185bba"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Client Image",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/clientimage/10d80930-71b9-4a89-92c1-a4def6c85da9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientimage",
+						"10d80930-71b9-4a89-92c1-a4def6c85da9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Organization",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"active\": 1,\r\n  \"version\": 99,\r\n  \"parkerProfileApprovalRequired\": 1,\r\n  \"client\": {\r\n        \"clientId\": \"0828a7ec-de89-432b-84ba-b4d8f1464616\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/organization",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"organization"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Organizations",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/organization/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"organization",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Organization",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"organizationId\": \"2bd61cd4-aeb2-4838-a7ec-98130e3d9442\",\r\n    \"active\": 1,\r\n    \"version\": 100,\r\n    \"parkerProfileApprovalRequired\": 1,\r\n    \"client\": {\r\n        \"clientId\": \"0828a7ec-de89-432b-84ba-b4d8f1464616\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/organization",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"organization"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Organizations By ClientID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/organization/client/a48e9780-130c-4302-9c19-e1d83a185bba",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"organization",
+						"client",
+						"a48e9780-130c-4302-9c19-e1d83a185bba"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Organization",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/organization/10d80930-71b9-4a89-92c1-a4def6c85da9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"organization",
+						"10d80930-71b9-4a89-92c1-a4def6c85da9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"active\": 1,\r\n    \"billingFrequency\": \"QUARTERLY\",\r\n    \"cost\": 4.63,\r\n    \"onlinePurchase\": 1,\r\n    \"client\": {\r\n        \"clientId\": \"0828a7ec-de89-432b-84ba-b4d8f1464616\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\": \"93459d1f-f1a6-4695-a7b9-9070990a3a20\",\r\n    \"active\": 1,\r\n    \"billingFrequency\": \"QUARTERLY\",\r\n    \"cost\": 5.63,\r\n    \"onlinePurchase\": 1,\r\n    \"client\": {\r\n        \"clientId\": \"0828a7ec-de89-432b-84ba-b4d8f1464616\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Products By ClientID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product/client/a48e9780-130c-4302-9c19-e1d83a185bba",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"client",
+						"a48e9780-130c-4302-9c19-e1d83a185bba"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product/10d80930-71b9-4a89-92c1-a4def6c85da9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"10d80930-71b9-4a89-92c1-a4def6c85da9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Parker Profile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"test_e5e97def6756\",\r\n    \"lastName\": \"test_1d8547116a00\",\r\n    \"active\": 1,\r\n    \"contactEmail\": \"test_adc1c4c19cf4\",\r\n    \"contactPhone\": \"test_1df248ee74d6\",\r\n    \"client\": {\r\n        \"clientId\": \"0828a7ec-de89-432b-84ba-b4d8f1464616\"\r\n    },\r\n    \"organization\": {\r\n        \"organizationId\": \"2bd61cd4-aeb2-4838-a7ec-98130e3d9442\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/parkerprofile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"parkerprofile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Parker Profiles",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/parkerprofile/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"parkerprofile",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Parker Profile",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"parkerProfileId\": \"9d4138ef-5016-495b-87a2-a8a2680e8231\",\r\n    \"firstName\": \"test_e5e97def6756\",\r\n    \"lastName\": \"test_1d8547116a00\",\r\n    \"active\": 1,\r\n    \"contactEmail\": \"test_adc1c4c19cf4\",\r\n    \"contactPhone\": \"123\",\r\n    \"client\": {\r\n        \"clientId\": \"0828a7ec-de89-432b-84ba-b4d8f1464616\"\r\n    },\r\n    \"organization\": {\r\n        \"organizationId\": \"2bd61cd4-aeb2-4838-a7ec-98130e3d9442\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/parkerprofile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"parkerprofile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Parker Profiles By ClientID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/parkerprofile/client/a48e9780-130c-4302-9c19-e1d83a185bba",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"parkerprofile",
+						"client",
+						"a48e9780-130c-4302-9c19-e1d83a185bba"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Parker Profiles By OrganizationID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/parkerprofile/organization/2bd61cd4-aeb2-4838-a7ec-98130e3d9442",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"parkerprofile",
+						"organization",
+						"2bd61cd4-aeb2-4838-a7ec-98130e3d9442"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Parker Profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/parkerprofile/10d80930-71b9-4a89-92c1-a4def6c85da9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"parkerprofile",
+						"10d80930-71b9-4a89-92c1-a4def6c85da9"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
